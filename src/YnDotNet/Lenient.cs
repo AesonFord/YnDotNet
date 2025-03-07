@@ -62,6 +62,7 @@ namespace YnDotNet
         private static readonly Dictionary<char, double> OMatch = new Dictionary<char, double>
         {
             { '9', 0.25 },
+            { 'a', 0.25} ,
             { '0', 0.25 },
             { 'i', 0.75 },
             { 'o', 1.0 },
