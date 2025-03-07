@@ -23,12 +23,12 @@ namespace YnDotNet
 
             string stringValue = value.ToString().Trim();
 
-            if (Regex.IsMatch(stringValue, @"^(?:y|yes|true|1|on)$", RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(stringValue, @"^(?:y|yes|true|1|on|enabled)$", RegexOptions.IgnoreCase))
             {
                 return true;
             }
 
-            if (Regex.IsMatch(stringValue, @"^(?:n|no|false|0|off)$", RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(stringValue, @"^(?:n|no|false|0|off|disabled)$", RegexOptions.IgnoreCase))
             {
                 return false;
             }

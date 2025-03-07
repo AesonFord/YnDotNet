@@ -10,8 +10,8 @@
     <Company>YourCompany</Company>
     <Description>A brief description of YnDotNet.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/YourUsername/YnDotNet</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/YourUsername/YnDotNet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/AesonFord/YnDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AesonFord/YnDotNet</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

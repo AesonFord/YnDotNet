@@ -14,6 +14,7 @@ namespace YnDotNet.Tests
         [InlineData("YES", true)]
         [InlineData("TRUE", true)]
         [InlineData("ON", true)]
+        [InlineData("enabled", true)]
         [InlineData("n", false)]
         [InlineData("no", false)]
         [InlineData("false", false)]
@@ -23,6 +24,8 @@ namespace YnDotNet.Tests
         [InlineData("NO", false)]
         [InlineData("FALSE", false)]
         [InlineData("OFF", false)]
+        [InlineData("disabled", false)]
+
         public void Parse_StandardValues_ReturnsExpectedResult(string input, bool expected)
         {
             // Act
