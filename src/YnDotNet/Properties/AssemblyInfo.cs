@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("yn-dotnet")]
-[assembly: AssemblyDescription("A description of yn-dotnet.")]
+[assembly: AssemblyTitle("YnDotNet")]
+[assembly: AssemblyDescription("A description of YnDotNet.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Your Company Name")]
-[assembly: AssemblyProduct("yn-dotnet Product Name")]
+[assembly: AssemblyProduct("YnDotNet Product Name")]
 [assembly: AssemblyCopyright("Copyright © Your Company Name")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -3,14 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>yn-dotnet</PackageId>
+    <PackageId>YnDotNet</PackageId>
     <Version>1.0.0</Version>
     <Authors>YourName</Authors>
     <Company>YourCompany</Company>
-    <Description>A brief description of yn-dotnet.</Description>
+    <Description>A brief description of YnDotNet.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/YourUsername/yn-dotnet</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/YourUsername/yn-dotnet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/YourUsername/YnDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/YourUsername/YnDotNet</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

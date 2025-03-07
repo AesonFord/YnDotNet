@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using YnDotNet; // Ensure this namespace contains the Yn class
+using YnDotNet;
 
 namespace YnDotNet.Tests
 {
@@ -43,7 +43,7 @@ namespace YnDotNet.Tests
         public void Parse_NonStandardValues_ReturnsDefault(string input)
         {
             // Act
-            bool? result = YnDotNet.Parse(input);
+            bool? result = Yn.Parse(input);
 
             // Assert
             Assert.Null(result);

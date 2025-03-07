@@ -1,27 +1,27 @@
-# yn-dotnet
+# YnDotNet
 
-yn-dotnet is a .NET library that provides [brief description of the library's purpose and functionality].
+YnDotNet is a .NET library that provides [brief description of the library's purpose and functionality].
 
 ## Installation
 
-You can install yn-dotnet via NuGet Package Manager:
+You can install YnDotNet via NuGet Package Manager:
 
 ```
-Install-Package yn-dotnet
+Install-Package YnDotNet
 ```
 
 Or using the .NET CLI:
 
 ```
-dotnet add package yn-dotnet
+dotnet add package YnDotNet
 ```
 
 ## Usage
 
-To use yn-dotnet, include it in your project:
+To use YnDotNet, include it in your project:
 
 ```csharp
-using yn-dotnet;
+using YnDotNet;
 ```
 
 Then, you can create an instance of `Class1` and use its methods:
@@ -33,7 +33,7 @@ myClass.MyMethod();
 
 ## Contributing
 
-If you would like to contribute to yn-dotnet, please fork the repository and submit a pull request.
+If you would like to contribute to YnDotNet, please fork the repository and submit a pull request.
 
 ## License
 
