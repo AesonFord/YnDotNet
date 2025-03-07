@@ -1,6 +1,4 @@
-using System;
 using Xunit;
-using YnDotNet;
 
 namespace YnDotNet.Tests
 {
