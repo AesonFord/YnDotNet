@@ -33,6 +33,12 @@ Then, you can use the `Yn` class and its methods:
 bool result = Yn.Parse("yes");
 ```
 
+The following case-insensitive values are recognized:
+
+```csharp
+'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off', 'enabled', 'disabled'
+```
+
 ## Contributing
 
 If you would like to contribute to YnDotNet, please fork the repository and submit a pull request.
