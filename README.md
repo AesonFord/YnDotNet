@@ -39,6 +39,17 @@ The following case-insensitive values are recognized:
 'y', 'yes', 'true', true, '1', 1, 'n', 'no', 'false', false, '0', 0, 'on', 'off', 'enabled', 'disabled'
 ```
 
+## Building a Release Version
+
+To manually build a release version of YnDotNet, run the following commands in the repository root:
+
+```
+dotnet build --configuration Release
+dotnet pack --configuration Release
+```
+
+Alternatively, pushing a git tag beginning with "v" (e.g., v1.0.0) on the main or master branch will trigger the automated GitHub Actions workflow to build and publish the release version.
+
 ## Contributing
 
 If you would like to contribute to YnDotNet, please fork the repository and submit a pull request.
