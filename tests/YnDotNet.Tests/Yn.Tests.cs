@@ -143,14 +143,9 @@ namespace YnDotNet.Tests
         /// <summary>
         /// Helper class that overrides ToString() for testing non-string object parsing
         /// </summary>
-        private class CustomToString
+        private class CustomToString(string value)
         {
-            private readonly string _value;
-
-            public CustomToString(string value)
-            {
-                _value = value;
-            }
+            private readonly string _value = value;
 
             public override string ToString()
             {

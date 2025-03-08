@@ -7,8 +7,8 @@ namespace YnDotNet
     /// </summary>
     internal static class Lenient
     {
-        private const double YES_MATCH_SCORE_THRESHOLD = 2.0;
-        private const double NO_MATCH_SCORE_THRESHOLD = 1.25;
+        private const double YesMatchScoreThreshold = 2.0;
+        private const double NoMatchScoreThreshold = 1.25;
 
         private static readonly Dictionary<char, double> YMatch = new Dictionary<char, double>
         {
@@ -124,12 +124,12 @@ namespace YnDotNet
         /// <returns>Boolean value based on lenient parsing or the default value if parsing fails.</returns>
         public static bool? Parse(string input, bool? defaultValue)
         {
-            if (GetYesMatchScore(input) >= YES_MATCH_SCORE_THRESHOLD)
+            if (GetYesMatchScore(input) >= YesMatchScoreThreshold)
             {
                 return true;
             }
 
-            if (GetNoMatchScore(input) >= NO_MATCH_SCORE_THRESHOLD)
+            if (GetNoMatchScore(input) >= NoMatchScoreThreshold)
             {
                 return false;
             }
