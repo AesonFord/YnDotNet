@@ -6,16 +6,11 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <PackageId>YnDotNet</PackageId>
     <Version>1.0.0</Version>
-    <Authors>YourName</Authors>
-    <Company>YourCompany</Company>
+    <Authors>Tyrus Rechs</Authors>
     <Description>A brief description of YnDotNet.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/AesonFord/YnDotNet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AesonFord/YnDotNet</RepositoryUrl>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Properties/AssemblyInfo.cs" />
-  </ItemGroup>
 
 </Project>
