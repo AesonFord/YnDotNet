@@ -11,22 +11,40 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/AesonFord/YnDotNet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AesonFord/YnDotNet</RepositoryUrl>
-    <!-- Exclude content and test assemblies from the package -->
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-  
+
   <ItemGroup>
+    <!-- Include the copied README in the package -->
+    <None Include="$(MSBuildProjectDirectory)\README.md" Pack="true" PackagePath="" />
+    
     <!-- Explicitly exclude test platform assemblies -->
     <None Remove="**\Microsoft.TestPlatform*.dll" />
     <None Remove="**\testhost*.dll" />
-    <!-- Include README.md file in the package -->
-    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
-  <!-- Exclude contentFiles from package -->
-  <PropertyGroup>
-    <IncludeContentInPack>false</IncludeContentInPack>
-  </PropertyGroup>
+  <!-- Copy README from grandparent directory before packing -->
+  <Target Name="CopyReadmeFromGrandparent" BeforeTargets="BeforeBuild">
+    <Copy 
+      SourceFiles="$(MSBuildProjectDirectory)\..\..\README.md"
+      DestinationFiles="$(MSBuildProjectDirectory)\README.md"
+      SkipUnchangedFiles="true"
+      OverwriteReadOnlyFiles="true"
+    />
+    <Message Text="Copied README.md from grandparent directory to $(MSBuildProjectDirectory)" Importance="high" />
+  </Target>
+
+  <!-- Delete README from project directory after packing -->
+  <Target Name="DeleteReadmeAfterPack" AfterTargets="Pack">
+    <Delete Files="$(MSBuildProjectDirectory)\README.md" />
+    <Message Text="Deleted README.md from $(MSBuildProjectDirectory)" Importance="high" />
+  </Target>
+
+  <!-- Diagnostic target to verify README before packing -->
+  <Target Name="VerifyReadmeBeforePack" BeforeTargets="Pack" DependsOnTargets="CopyReadmeFromGrandparent">
+    <Message Text="README file exists in project: $([System.IO.File]::Exists('$(MSBuildProjectDirectory)\README.md'))" Importance="high" />
+    <Error Condition="!Exists('$(MSBuildProjectDirectory)\README.md')" Text="README.md not found at: $(MSBuildProjectDirectory)\README.md" />
+  </Target>
 
 </Project>
