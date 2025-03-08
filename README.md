@@ -4,7 +4,7 @@
 [![Build Status](https://github.com/AesonFord/YnDotNet/workflows/Build%20and%20Publish%20NuGet%20Package/badge.svg)](https://github.com/AesonFord/YnDotNet/actions)
 [![NuGet](https://img.shields.io/nuget/v/YnDotNet.svg)](https://www.nuget.org/packages/YnDotNet/)
 [![codecov](https://codecov.io/gh/AesonFord/YnDotNet/branch/main/graph/badge.svg)](https://codecov.io/gh/AesonFord/YnDotNet)
-![Dependabot](https://img.shields.io/github/dependabot/status/AesonFord/YnDotNet)
+![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen?logo=github)
 
 
 YnDotNet is a .NET port of the popular [yn](https://github.com/sindresorhus/yn) npm package. It provides a simple way to parse "yes" or "no" like values into boolean values, with support for lenient parsing to handle typos.
