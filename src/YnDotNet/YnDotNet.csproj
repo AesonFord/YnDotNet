@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <PackageId>YnDotNet</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Tyrus Rechs</Authors>
+    <Description>A brief description of YnDotNet.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/AesonFord/YnDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AesonFord/YnDotNet</RepositoryUrl>
+    <!-- Exclude content and test assemblies from the package -->
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- Explicitly exclude test platform assemblies -->
+    <None Remove="**\Microsoft.TestPlatform*.dll" />
+    <None Remove="**\testhost*.dll" />
+  </ItemGroup>
+
+  <!-- Exclude contentFiles from package -->
+  <PropertyGroup>
+    <IncludeContentInPack>false</IncludeContentInPack>
+  </PropertyGroup>
+
+</Project>
