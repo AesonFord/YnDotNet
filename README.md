@@ -1,10 +1,13 @@
 # YnDotNet
 
-YnDotNet is a .NET library that provides [brief description of the library's purpose and functionality].
+[![NuGet](https://img.shields.io/nuget/v/YnDotNet.svg)](https://www.nuget.org/packages/YnDotNet/)
+[![Build Status](https://github.com/AesonFord/YnDotNet/workflows/Build%20and%20Publish%20NuGet%20Package/badge.svg)](https://github.com/AesonFord/YnDotNet/actions)
+
+YnDotNet is a .NET port of the popular [yn](https://github.com/sindresorhus/yn) npm package. It provides a simple way to parse "yes" or "no" like values into boolean values, with support for lenient parsing to handle typos.
 
 ## Installation
 
-You can install YnDotNet via NuGet Package Manager:
+Install using the NuGet Package Manager:
 
 ```
 Install-Package YnDotNet
@@ -24,11 +27,10 @@ To use YnDotNet, include it in your project:
 using YnDotNet;
 ```
 
-Then, you can create an instance of `Class1` and use its methods:
+Then, you can use the `Yn` class and its methods:
 
 ```csharp
-var myClass = new Class1();
-myClass.MyMethod();
+bool result = Yn.Parse("yes");
 ```
 
 ## Contributing
