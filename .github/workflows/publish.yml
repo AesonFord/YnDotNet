@@ -43,7 +43,7 @@ jobs:
       run: dotnet pack --configuration Release --no-build -p:PackageVersion=$PACKAGE_VERSION -o out
     
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: nuget-package
         path: out/*.nupkg
