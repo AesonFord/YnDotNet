@@ -1,0 +1,33 @@
+version: 2
+updates:
+  # Configure Dependabot to check for NuGet package updates
+  - package-ecosystem: "nuget"
+    # Directory where your .csproj or .sln file is located (adjust if needed)
+    directory: "/"
+    # How often to check for updates (e.g., daily, weekly, monthly)
+    schedule:
+      interval: "weekly"
+    # Optional: Specify a time (in UTC) for the update check
+    # schedule:
+    #   time: "02:00"
+    # Optional: Limit the number of open pull requests Dependabot can create
+    open-pull-requests-limit: 10
+    # Optional: Add labels to the pull requests created by Dependabot
+    labels:
+      - "dependencies"
+      - "nuget"
+    # Optional: Target a specific branch for updates (default is the main branch)
+    # target-branch: "main"
+    # Optional: Assign reviewers or teams to PRs
+    # reviewers:
+    #   - "username-or-team"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Workflow files stored in the default location of `.github/workflows`
+    # You don't need to specify `/.github/workflows` for `directory`. You can use `directory: "/"`.
+    directory: "/"
+    labels:
+      - "github actions"
+    schedule:
+      interval: "weekly"
