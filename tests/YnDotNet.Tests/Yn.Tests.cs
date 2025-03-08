@@ -8,7 +8,9 @@ namespace YnDotNet.Tests
         [InlineData("y", true)]
         [InlineData("yes", true)]
         [InlineData("true", true)]
+        [InlineData(true, true)]
         [InlineData("1", true)]
+        [InlineData(1, true)]
         [InlineData("on", true)]
         [InlineData("Y", true)]
         [InlineData("YES", true)]
@@ -18,7 +20,9 @@ namespace YnDotNet.Tests
         [InlineData("n", false)]
         [InlineData("no", false)]
         [InlineData("false", false)]
+        [InlineData(false, false)]
         [InlineData("0", false)]
+        [InlineData(0, false)]
         [InlineData("off", false)]
         [InlineData("N", false)]
         [InlineData("NO", false)]
@@ -26,7 +30,7 @@ namespace YnDotNet.Tests
         [InlineData("OFF", false)]
         [InlineData("disabled", false)]
 
-        public void Parse_StandardValues_ReturnsExpectedResult(string input, bool expected)
+        public void Parse_StandardValues_ReturnsExpectedResult(object input, bool expected)
         {
             // Act
             bool? result = Yn.Parse(input);
