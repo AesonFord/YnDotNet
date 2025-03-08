@@ -13,12 +13,15 @@
     <RepositoryUrl>https://github.com/AesonFord/YnDotNet</RepositoryUrl>
     <!-- Exclude content and test assemblies from the package -->
     <NoPackageAnalysis>true</NoPackageAnalysis>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   
   <ItemGroup>
     <!-- Explicitly exclude test platform assemblies -->
     <None Remove="**\Microsoft.TestPlatform*.dll" />
     <None Remove="**\testhost*.dll" />
+    <!-- Include README.md file in the package -->
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <!-- Exclude contentFiles from package -->
