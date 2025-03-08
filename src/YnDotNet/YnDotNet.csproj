@@ -21,7 +21,7 @@
     <None Remove="**\Microsoft.TestPlatform*.dll" />
     <None Remove="**\testhost*.dll" />
     <!-- Include README.md file in the package -->
-    <None Include="$(MSBuildThisFileDirectory)..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <!-- Exclude contentFiles from package -->

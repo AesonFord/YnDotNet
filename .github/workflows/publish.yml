@@ -23,6 +23,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     
+    - name: Copy README to project directory
+      run: cp README.md src/YnDotNet/
+    
     - name: Build
       run: dotnet build --configuration Release --no-restore
     
