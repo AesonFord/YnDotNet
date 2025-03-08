@@ -28,6 +28,14 @@ jobs:
     
     - name: Build
       run: dotnet build --configuration Release --no-restore
+      
+    # Update the README path property to ensure it's found during packaging
+    - name: Update project file for README
+      run: |
+        sed -i 's|<PackageReadmeFile>README.md</PackageReadmeFile>|<PackageReadmeFile>README.md</PackageReadmeFile><None Include="README.md" Pack="true" PackagePath="\" /></None>|g' src/YnDotNet/YnDotNet.csproj || echo "README element not found, adding it"
+        if ! grep -q "PackageReadmeFile" src/YnDotNet/YnDotNet.csproj; then
+          sed -i '/<PropertyGroup>/a \    <PackageReadmeFile>README.md</PackageReadmeFile>\n    <None Include="README.md" Pack="true" PackagePath="\" />' src/YnDotNet/YnDotNet.csproj
+        fi
     
     - name: Test
       run: dotnet test --configuration Release --no-build
