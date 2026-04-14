@@ -133,6 +133,24 @@ namespace YnDotNet.Tests
         }
 
         [Theory]
+        [InlineData("yes", true)]   // Exact match: score 3.0 >= 2.0 threshold
+        [InlineData("yex", true)]   // y(1.0) + e(1.0) + x(0.25) = 2.25 >= 2.0
+        [InlineData("yrs", true)]   // y(1.0) + r(0.75) + s(1.0) = 2.75 >= 2.0
+        [InlineData("yed", true)]   // y(1.0) + e(1.0) + d(0.25) = 2.25 >= 2.0
+        [InlineData("no", false)]   // Exact match: score 2.0 >= 1.25 threshold
+        [InlineData("np", false)]   // n(1.0) + p(0.75) = 1.75 >= 1.25
+        [InlineData("bi", false)]   // b(0.75) + i(0.75) = 1.5 >= 1.25
+        [InlineData("mk", null)]    // m(0.75) + k(0.25) = 1.0 < 1.25 threshold => default
+        public void Parse_LenientMode_ThresholdBoundary(string input, bool? expected)
+        {
+            // Act
+            bool? result = Yn.Parse(input, true);
+
+            // Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Theory]
         [InlineData("  yes  ", true)] // Test trimming
         [InlineData("  no  ", false)] // Test trimming
         public void Parse_TrimsInput_BeforeProcessing(string input, bool expected)

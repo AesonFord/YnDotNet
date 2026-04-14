@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("YnDotNet")]
-[assembly: AssemblyDescription("A description of YnDotNet.")]
+[assembly: AssemblyDescription("Parse yes/no like values with lenient parsing support for typos.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Your Company Name")]
-[assembly: AssemblyProduct("YnDotNet Product Name")]
-[assembly: AssemblyCopyright("Copyright © Your Company Name")]
+[assembly: AssemblyCompany("Tyrus Rechs")]
+[assembly: AssemblyProduct("YnDotNet")]
+[assembly: AssemblyCopyright("Copyright © Tyrus Rechs")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
