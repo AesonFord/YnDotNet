@@ -7,6 +7,9 @@ namespace YnDotNet
     /// </summary>
     public static class Yn
     {
+        private static readonly Regex YesPattern = new Regex("^(?:y|yes|true|1|on|enabled)$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+        private static readonly Regex NoPattern = new Regex("^(?:n|no|false|0|off|disabled)$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
         /// <summary>
         /// Parse yes/no like values.
         /// </summary>
@@ -23,12 +26,12 @@ namespace YnDotNet
 
             string stringValue = value.ToString().Trim();
 
-            if (Regex.IsMatch(stringValue, "^(?:y|yes|true|1|on|enabled)$", RegexOptions.IgnoreCase))
+            if (YesPattern.IsMatch(stringValue))
             {
                 return true;
             }
 
-            if (Regex.IsMatch(stringValue, "^(?:n|no|false|0|off|disabled)$", RegexOptions.IgnoreCase))
+            if (NoPattern.IsMatch(stringValue))
             {
                 return false;
             }
